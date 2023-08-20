@@ -1,4 +1,4 @@
-%% Gauss- Seidel:
+%% Gauss-Seidel:  Solve Ax=B
 clear;
 clc;
 
