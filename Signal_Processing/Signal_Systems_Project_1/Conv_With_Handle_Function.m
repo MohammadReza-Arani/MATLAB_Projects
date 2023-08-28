@@ -1,0 +1,13 @@
+clear;
+clc;
+u = @( t ) double( t >= 0) ;
+nx=0:1:14;
+nh=0:1:24;
+ny=convindicesme(nx,nh);
+x=@(nx) double((1/2).^(nx-2).*u(nx-2));
+h=@(nh) u(nh);
+y=conv(x(nx),h(nh));
+%title('plot of signalyn=xn*xn','interpreter','latex','frontsize',16);
+xlabel('$n$','interpreter','latex');
+ylabel('$y[n]$','interpreter','latex');
+stem(ny,y,'linewidth',2);
